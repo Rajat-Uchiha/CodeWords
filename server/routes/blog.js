@@ -19,8 +19,6 @@ blog_router.get("/blogs", (req, res) => {
 
 //*Get the blog based on it's id
 blog_router.get("/blogs/:id", (req, res) => {
-  console.log("I am get request in blog.js");
-
   const blogId = req.params.id;
 
   //!Validation
