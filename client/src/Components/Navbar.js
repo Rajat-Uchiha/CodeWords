@@ -3,14 +3,16 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { AppContext } from "../App";
+// import { RxCross1 } from "react-icons/rx";
 import { useContext } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const { nav_username, setNav_username } = useContext(AppContext);
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [cookie, removeCookie] = useCookies(["auth_Token"]);
+  const [cookie, _, removeCookie] = useCookies(["auth_Token"]);
 
   const logout = () => {
     removeCookie("auth_Token");
@@ -22,14 +24,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black text-white py-4">
-        <ul className="flex justify-between items-center space-x-10 ml-20 font-Kanit text-2xl mx-10 ">
+      <nav className="bg-black text-white py-4 min-w-full ">
+        <ul className="flex justify-between items-center space-x-10 mx-2 md:ml-20 font-Kanit text-2xl md:mx-10 ">
           <div>
-            <span className="text-transparent font-Kanit text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
+            <span className="text-transparent font-Kanit text-md md:text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
               CodeWords
             </span>
           </div>
-          <div className="flex space-x-10">
+          <div>
+            <GiHamburgerMenu />
+            {/* <RxCross1 className="border-2 w-10 border-red-600" /> */}
+          </div>
+
+          {/* FOR BIG SCREENS */}
+
+          <div className="hidden space-x-10 md:flex">
             <li
               className={`cursor-pointer ${
                 location.pathname === "/" ? " text-yellow-400" : ""

@@ -10,7 +10,7 @@ const Login = () => {
   const { setNav_username } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const [setCookie] = useCookies(["auth_Token"]);
+  const [_, setCookie] = useCookies(["auth_Token"]);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,6 +22,7 @@ const Login = () => {
   };
 
   const loginBtn = async () => {
+    console.log("Logging in");
     try {
       const response = await axios.post("http://localhost:3001/user/login", {
         username,

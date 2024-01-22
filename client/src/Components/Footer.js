@@ -6,14 +6,14 @@ import myLogo from "./myLogo.png";
 const Footer = () => {
   const location = useLocation();
 
-  const [cookie] = useCookies(["auth_Token"]);
+  const [cookie, _] = useCookies(["auth_Token"]);
 
   return (
-    <footer className="bg-black text-yellow-400 font-Kanit px-20 flex border-t-2 border-white py-8">
+    <footer className="bg-black text-yellow-400 font-Kanit px-4 md:px-20 flex-col  space-y-4 md:space-y-0 md:flex md:flex-row border-t-2 border-white py-8">
       <div className="w-1/4">
-        <ul className=" text-xl font-normal space-y-6">
+        <ul className="text-sm md:text-xl font-normal space-y-4 md:space-y-6">
           <h3 className="font-semibold">RESOURCES</h3>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-2 md:space-y-4">
             <Link
               to="/"
               className={` ${
@@ -37,9 +37,9 @@ const Footer = () => {
       </div>
       {!cookie.auth_Token ? (
         <div className="w-1/4">
-          <ul className=" text-xl font-normal space-y-6">
+          <ul className="text-sm md:text-xl font-normal space-y-4 md:space-y-6">
             <h3 className="font-semibold">AUTHETICATION</h3>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2 md:space-y-4">
               <Link
                 to="/login"
                 className={` ${
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       ) : (
         <div className="w-1/4">
-          <ul className=" text-xl font-normal space-y-6">
+          <ul className=" text-sm md:text-xl font-normal space-y-4 md:space-y-6">
             <h3 className="font-semibold">PERSONAL</h3>
             <div className="flex flex-col space-y-4">
               <Link
@@ -93,15 +93,15 @@ const Footer = () => {
         </div>
       )}
 
-      <div className="flex justify-evenly items-center w-full ">
+      <div className="flex-col md:flex justify-evenly items-center w-full ">
         <div>
-          <p className="text-xl">
+          <p className=" text-md md:text-xl">
             &#169; codewords.netlify.app. All Rights Reserved.
           </p>
         </div>
         <div>
           <img
-            className="invert w-20"
+            className="invert w-16 md:w-20 py-2 md:py-0"
             src={myLogo}
             alt="work-with-rajat_logo"
           />
