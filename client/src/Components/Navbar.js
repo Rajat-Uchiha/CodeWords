@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [cookie, _, removeCookie] = useCookies(["auth_Token"]);
+  const [cookie, removeCookie] = useCookies(["auth_Token"]);
 
   const logout = () => {
     removeCookie("auth_Token");
@@ -22,70 +22,77 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-black/90 text-white py-4">
-        <ul className="flex justify-start items-center space-x-10 ml-20 font-Kanit text-2xl mx-10 ">
-          <li
-            className={`cursor-pointer ${
-              location.pathname === "/" ? " text-yellow-400" : ""
-            } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-          >
-            <Link to="/">Blogs</Link>
-          </li>
-          <li
-            className={`cursor-pointer ${
-              location.pathname === "/about" ? " text-yellow-400" : ""
-            } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-          >
-            <Link to="/about">About</Link>
-          </li>
-          {!cookie.auth_Token ? (
-            <>
-              <li
-                className={`cursor-pointer ${
-                  location.pathname === "/login" ? " text-yellow-400" : ""
-                } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-              >
-                <Link to="/login">Login</Link>
-              </li>
-              <li
-                className={`cursor-pointer ${
-                  location.pathname === "/signup" ? " text-yellow-400" : ""
-                } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-              >
-                <Link to="/signup">SignUp</Link>
-              </li>
-            </>
-          ) : (
-            <div className="flex items-center justify-end space-x-6 w-full">
-              <li
-                className={`cursor-pointer ${
-                  location.pathname === "/myblogs" ? " text-yellow-400" : ""
-                } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-              >
-                <Link to="/myblogs/">My Blogs</Link>
-              </li>
-              <li
-                className={`cursor-pointer ${
-                  location.pathname === "/addblog" ? " text-yellow-400" : ""
-                } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
-              >
-                <Link to="/addblog">Add Blog</Link>
-              </li>
-              <div className="flex space-x-4  ">
-                <h3 className="text-xl underline underline-offset-4">
-                  Hi👋🏻 {nav_username}
-                </h3>
-                <button
-                  onClick={logout}
-                  className="text-xl border-2 border-red-600 bg-red-600 px-4 hover:scale-110 transition-all "
+      <nav className="bg-black text-white py-4">
+        <ul className="flex justify-between items-center space-x-10 ml-20 font-Kanit text-2xl mx-10 ">
+          <div>
+            <span className="text-transparent font-Kanit text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
+              CodeWords
+            </span>
+          </div>
+          <div className="flex space-x-10">
+            <li
+              className={`cursor-pointer ${
+                location.pathname === "/" ? " text-yellow-400" : ""
+              } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+            >
+              <Link to="/">Blogs</Link>
+            </li>
+            <li
+              className={`cursor-pointer ${
+                location.pathname === "/about" ? " text-yellow-400" : ""
+              } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+            >
+              <Link to="/about">About</Link>
+            </li>
+            {!cookie.auth_Token ? (
+              <>
+                <li
+                  className={`cursor-pointer ${
+                    location.pathname === "/login" ? " text-yellow-400" : ""
+                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
                 >
-                  Logout
-                </button>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li
+                  className={`cursor-pointer ${
+                    location.pathname === "/signup" ? " text-yellow-400" : ""
+                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                >
+                  <Link to="/signup">SignUp</Link>
+                </li>
+              </>
+            ) : (
+              <div className="flex items-center justify-end space-x-6 w-full">
+                <li
+                  className={`cursor-pointer ${
+                    location.pathname === "/myblogs" ? " text-yellow-400" : ""
+                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                >
+                  <Link to="/myblogs/">My Blogs</Link>
+                </li>
+                <li
+                  className={`cursor-pointer ${
+                    location.pathname === "/addblog" ? " text-yellow-400" : ""
+                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                >
+                  <Link to="/addblog">Add Blog</Link>
+                </li>
+                <div className="flex space-x-4  ">
+                  <h3 className="text-xl underline underline-offset-4">
+                    Hi👋🏻 {nav_username}
+                  </h3>
+                  <button
+                    onClick={logout}
+                    className="text-xl border-2 border-red-600 bg-red-600 px-4 hover:scale-110 transition-all "
+                  >
+                    Logout
+                  </button>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </ul>
-      </div>
+      </nav>
       <hr />
     </>
   );

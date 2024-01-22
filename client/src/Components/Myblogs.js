@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 const Myblogs = () => {
-  const [cookie, _] = useCookies(["auth_Token"]);
-  const navigate = useNavigate();
+  const [cookie] = useCookies(["auth_Token"]);
   const [userBlogs, setUserBlogs] = useState([]);
 
   useEffect(() => {
@@ -50,7 +49,7 @@ const Myblogs = () => {
   };
 
   return (
-    <section className="bg-black/90 min-h-screen">
+    <section className="bg-black min-h-screen">
       {userBlogs.length ? (
         <div className="pt-10 md:mx-20">
           <span className="text-transparent text-6xl font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
@@ -76,9 +75,9 @@ const Myblogs = () => {
           return (
             <ul
               key={item._id}
-              className="px-20 list-disc text-white pt-4 pb-10 font-Kanit"
+              className="px-20 list-disc text-white pt-4 font-Kanit space-y-4"
             >
-              <li className="py-2 space-y-2">
+              <li className="space-y-4">
                 <Link to={`/blogs/${item._id}`} className="my-4" key={item._id}>
                   <h2 className="text-4xl py-2 font-semibold text-transparent bg-clip-text bg-white hover:bg-gradient-to-r hover:from-yellow-400 hover:to-green-700 ">
                     {item.title}

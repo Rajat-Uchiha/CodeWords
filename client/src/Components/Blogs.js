@@ -32,7 +32,7 @@ const Blogs = () => {
   );
 
   return (
-    <section className="min-h-screen py-10  bg-black/90 text-white">
+    <section className="min-h-screen py-10  bg-black text-white">
       {allBlogs.length === 0 ? (
         <div className="mx-20 space-y-4 font-Kanit ">
           <h1 className="text-8xl">

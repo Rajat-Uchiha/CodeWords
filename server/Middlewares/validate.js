@@ -1,6 +1,5 @@
 const validate = (req, res, next) => {
   const { username, password } = req.body;
-  console.log("Validation is going on");
 
   if (
     (username.length < 3 && password.length < 6) ||

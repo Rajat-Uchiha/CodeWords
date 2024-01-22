@@ -6,10 +6,10 @@ import myLogo from "./myLogo.png";
 const Footer = () => {
   const location = useLocation();
 
-  const [cookie, _] = useCookies(["auth_Token"]);
+  const [cookie] = useCookies(["auth_Token"]);
 
   return (
-    <footer className="bg-black/90 text-yellow-400 font-Kanit px-20 flex border-t-2 border-white py-8">
+    <footer className="bg-black text-yellow-400 font-Kanit px-20 flex border-t-2 border-white py-8">
       <div className="w-1/4">
         <ul className=" text-xl font-normal space-y-6">
           <h3 className="font-semibold">RESOURCES</h3>

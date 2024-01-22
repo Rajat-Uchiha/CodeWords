@@ -21,7 +21,7 @@ const Currblog = () => {
   }, [currBlog, location]);
 
   return (
-    <section className="min-h-screen bg-black/90 px-20">
+    <section className="min-h-screen bg-black px-20">
       {currBlog ? (
         <div className="py-10 space-y-8">
           <div className="font-Kanit  ">

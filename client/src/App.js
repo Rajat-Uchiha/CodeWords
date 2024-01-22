@@ -29,8 +29,14 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
-            <Route path="addblog" element={<Addblog />} />
-            <Route path="myblogs" element={<Myblogs />} />
+            <Route
+              path="addblog"
+              element={nav_username ? <Addblog /> : <Login />}
+            />
+            <Route
+              path="myblogs"
+              element={nav_username ? <Myblogs /> : <Login />}
+            />
             <Route path={`/blogs/:id`} element={<Currblog />} />
           </Routes>
           <Footer />

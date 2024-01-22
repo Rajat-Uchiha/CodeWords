@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="bg-black/90 min-h-screen py-10 ">
+    <section className="bg-black text-white min-h-screen py-10 ">
       <div className="font-Kanit space-y-4 text-white py-6 ">
         <h1 className="font-bold text-center text-4xl">
           <span className="text-transparent font-Kanit text-6xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">

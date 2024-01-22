@@ -30,7 +30,7 @@ const Signup = () => {
   };
 
   return (
-    <section className=" px-20 min-h-screen bg-black/90 ">
+    <section className=" px-20 min-h-screen bg-black ">
       <div className=" pt-10">
         <h1 className="text-8xl font-Kanit font-bold ">
           <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
