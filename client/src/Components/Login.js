@@ -41,49 +41,50 @@ const Login = () => {
   };
 
   return (
-    <section className=" px-20 min-h-screen bg-black ">
+    <section className="px-4 md:px-20 min-h-screen bg-black ">
       <div className=" pt-10">
-        <h1 className="text-8xl font-Kanit font-bold ">
+        <h1 className=" text-3xl md:text-8xl font-Kanit font-bold ">
           <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
             Hey! 👋🏻 Welcome Back
           </span>
           <br />
         </h1>
       </div>
-      <div className="flex justify-center items-start ">
-        <div className="w-1/2 flex justify-center">
+
+      <div className=" md:flex justify-center items-start ">
+        <div className="w-full md:w-1/2 flex justify-center">
           <img src={LoginImage} alt="newImage" />
         </div>
-        <div className="w-1/2  flex justify-center items-center  ">
+        <div className="w-full md:w-1/2 flex justify-center items-center  ">
           <div className="font-Kanit space-y-14  w-3/4 my-10">
             <div className=" space-y-4 flex flex-col items-start justify-center ">
               <label htmlFor="">
-                <span className=" font-Kanit text-4xl font-semibold  text-white">
+                <span className=" font-Kanit text-2xl md:text-4xl font-semibold  text-white">
                   Username
                 </span>
               </label>
               <input
                 onChange={getUsername}
-                className=" p-2 w-full  text-2xl text-white bg-black/30 border-2 border-white"
+                className=" p-1 md:p-2 w-full  md:text-2xl text-white bg-black/30 border-2 border-white"
                 type="text"
               />
             </div>
             <div className=" space-y-4 flex flex-col items-start justify-center">
               <label htmlFor="">
-                <span className="font-Kanit text-4xl font-semibold  text-white">
+                <span className="font-Kanit text-2xl md:text-4xl font-semibold  text-white">
                   Password
                 </span>
               </label>
               <input
                 onChange={getPassword}
-                className=" w-full p-2 text-2xl text-white bg-black/30 border-2 border-white"
+                className=" w-full p-1 md:p-2 md:text-2xl text-white bg-black/30 border-2 border-white"
                 type="password"
               />
             </div>
             <div className="flex justify-between items-end">
               <button
                 onClick={loginBtn}
-                className="my-2 hover:scale-110 transition-all hover:text-2xl text-xl font-bold font-Kanit text-white bg-yellow-500 py-2 px-12"
+                className="my-2 hover:scale-110 transition-all md:hover:text-2xl text-lg md:text-xl font-bold font-Kanit text-white bg-yellow-500 py-1 md:py-2 px-12"
               >
                 LOGIN
               </button>
