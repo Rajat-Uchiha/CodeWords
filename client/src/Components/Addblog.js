@@ -3,6 +3,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
+import addblogSVG from "./addblogSVG.svg";
 
 const Addblog = () => {
   const navigate = useNavigate();
@@ -44,60 +45,57 @@ const Addblog = () => {
       {!cookie.auth_Token ? (
         <Login />
       ) : (
-        <section className=" flex flex-col justify-center z-10 relative min-h-screen items-start bg-black px-10">
-          <div className="-rotate-12 opacity-10 -z-10 absolute flex justify-center items-center  top-40">
-            <h5 className="text-yellow-400 text-7xl text-center leading-loose font-bold underline underline-offset-8">
-              SHARE YOUR <br />
-              THOUGHTS-LEARNINGS-EXPERIENCES
-            </h5>
-          </div>
-          <form className="flex z-10 flex-col md:w-full space-y-6 text-white  px-20 min-h-96 font-Kanit py-10 ">
+        <section className=" w-full flex flex-col justify-center min-h-96 items-start md:px-10 py-10 bg-black ">
+          <form className="flex flex-col md:w-1/2 mx-auto space-y-6 md:px-20  font-Kanit py-10 ">
             <div className="flex flex-col space-y-4">
-              <label className="text-6xl my-2 font-bold   " htmlFor="title">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
-                  Title of the Blog
-                </span>
+              <label
+                className="text-3xl md:text-4xl my-2 font-medium"
+                htmlFor="title"
+              >
+                <span className=" text-white">Title of the Blog</span>
               </label>
               <input
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}
-                className=" p-2  text-2xl text-white bg-black/30 border-2 border-white"
+                className=" p-1 text-xl md:p-2 md:text-2xl text-white bg-black/30 border-2 border-white"
                 type="text"
               />
             </div>
             <div className="flex flex-col space-y-4">
-              <label className="text-6xl my-2 font-bold" htmlFor="snippet">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
-                  Snippet
-                </span>
+              <label
+                className="text-3xl md:text-4xl my-2 font-medium"
+                htmlFor="snippet"
+              >
+                <span className="text-white">Snippet</span>
               </label>
               <input
                 onChange={(e) => {
                   setSnippet(e.target.value);
                 }}
-                className=" p-2  text-2xl text-white bg-black/30 border-2 border-white"
+                className="p-1 text-xl md:p-2 md:text-2xl text-white bg-black/30 border-2 border-white"
                 type="text"
               />
             </div>
             <div className="flex flex-col space-y-4">
-              <label className="text-6xl my-2 font-bold" htmlFor="body">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
-                  Body
-                </span>
+              <label
+                className="text-3xl md:text-4xl my-2 font-medium"
+                htmlFor="body"
+              >
+                <span className="text-white">Body</span>
               </label>
               <textarea
                 onChange={(e) => {
                   setBody(e.target.value);
                 }}
-                className=" p-2  text-2xl text-white bg-black/30 border-2 border-white"
+                className="p-1 text-xl md:p-2 md:text-2xl text-white bg-black/30 border-2 border-white"
                 type="text"
               />
             </div>
           </form>
           <button
             onClick={addBlog}
-            className=" text-white text-xl font-semibold py-2 hover:text-2xl transition-all my-2 px-12 flex mx-auto bg-yellow-500 font-Kanit "
+            className=" text-white text-sm  md:text-xl font-semibold py-2 hover:text-2xl transition-all my-2 px-12 flex mx-auto bg-yellow-500 font-Kanit "
           >
             ADD BLOG
           </button>

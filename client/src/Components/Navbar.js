@@ -111,7 +111,7 @@ const Navbar = () => {
 
       {/* For small screen */}
       <div
-        className={`px-2 transition-all bg-black/95 absolute z-100 w-full ${
+        className={`px-2 pb-10 transition-all bg-black/95 absolute z-100 w-full ${
           isBurgerClicked ? "flex  min-h-60 " : " hidden h-0"
         } items-center md:hidden`}
       >
@@ -148,7 +148,7 @@ const Navbar = () => {
               </li>
             </>
           ) : (
-            <div className="flex items-center justify-end space-x-6 w-full">
+            <div className=" flex-col space-y-2 md:space-y-0 md:flex md:flex-row items-center justify-end md:space-x-6 w-full ">
               <li
                 className={`cursor-pointer ${
                   location.pathname === "/myblogs" ? " text-yellow-400" : ""
@@ -163,7 +163,7 @@ const Navbar = () => {
               >
                 <Link to="/addblog">Add Blog</Link>
               </li>
-              <div className="flex space-x-4  ">
+              <div className=" flex flex-col space-y-4 md:space-y-0 justify-start items-start  md:flex-row md:flex md:space-x-4  ">
                 <h3 className="text-xl underline underline-offset-4">
                   Hi👋🏻 {nav_username}
                 </h3>

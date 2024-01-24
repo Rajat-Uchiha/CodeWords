@@ -16,10 +16,13 @@ const Signup = () => {
 
   const signupBtn = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/user/signup", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://codewords-web-service.onrender.com/user/signup",
+        {
+          username,
+          password,
+        }
+      );
 
       window.localStorage.setItem("userID", response.data.userID);
       window.localStorage.setItem("username", response.data.username);

@@ -9,7 +9,9 @@ const Blogs = () => {
   useEffect(() => {
     const getBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/blogs");
+        const response = await axios.get(
+          "https://codewords-web-service.onrender.com/blogs"
+        );
         const data = response.data;
 
         setAllBlogs(data);
@@ -35,7 +37,7 @@ const Blogs = () => {
     <section className="min-h-screen py-10 bg-black text-white">
       {allBlogs.length === 0 ? (
         <div className=" mx-4 md:mx-20 space-y-4 font-Kanit">
-          <h1 className="text-5xl md:text-8xl">
+          <h1 className="text-4xl md:text-8xl">
             <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
               CODE
             </span>
@@ -50,13 +52,13 @@ const Blogs = () => {
         </div>
       ) : (
         <ul className="mx-4 md:mx-20 space-y-4 font-Kanit list-disc">
-          <h1 className="text-8xl">
+          <h1 className="text-5xl md:text-8xl">
             <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
               CODE
             </span>
             _AND LET OTHERS KNOW <br /> HOW TO DO SO
           </h1>
-          <h3 className="text-5xl py-4">
+          <h3 className="text-2xl md:text-5xl  py-4">
             SHARE YOUR_
             <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700 ">
               KNOWLEDGE - EXPERIENCE - JOURNEY
@@ -81,13 +83,13 @@ const Blogs = () => {
                         className="my-4"
                         key={item._id}
                       >
-                        <h2 className="text-4xl py-2 font-semibold text-transparent bg-clip-text bg-white hover:bg-gradient-to-r hover:from-yellow-400 hover:to-green-700 ">
+                        <h2 className=" text-2xl md:text-4xl py-2 font-semibold text-transparent bg-clip-text bg-white hover:bg-gradient-to-r hover:from-yellow-400 hover:to-green-700 ">
                           {item.title}
                         </h2>
                       </Link>
-                      <h4 className="text-2xl">{item.snippet}</h4>
+                      <h4 className=" text-lg md:text-2xl">{item.snippet}</h4>
                       <div className="flex justify-start items-center space-x-10">
-                        <p className="text-lg font-Kanit ">
+                        <p className=" text-sm md:text-lg font-Kanit ">
                           Published:-{new Date(item.createdAt).toDateString()}
                         </p>
                       </div>
@@ -105,14 +107,20 @@ const Blogs = () => {
                     return (
                       <div key={item._id}>
                         <li className="py-2 space-y-2">
-                          <Link to={`/blogs/${item._id}`} className="my-4">
-                            <h2 className="text-4xl py-2 font-semibold text-transparent bg-clip-text bg-white hover:bg-gradient-to-r hover:from-yellow-400 hover:to-green-700 ">
+                          <Link
+                            to={`/blogs/${item._id}`}
+                            className="my-4"
+                            key={item._id}
+                          >
+                            <h2 className=" text-2xl md:text-4xl py-2 font-semibold text-transparent bg-clip-text bg-white hover:bg-gradient-to-r hover:from-yellow-400 hover:to-green-700 ">
                               {item.title}
                             </h2>
                           </Link>
-                          <h4 className="text-2xl">{item.snippet}</h4>
+                          <h4 className=" text-lg md:text-2xl">
+                            {item.snippet}
+                          </h4>
                           <div className="flex justify-start items-center space-x-10">
-                            <p className="text-lg font-Kanit ">
+                            <p className=" text-sm md:text-lg font-Kanit ">
                               Published:-
                               {new Date(item.createdAt).toDateString()}
                             </p>
@@ -125,7 +133,7 @@ const Blogs = () => {
                 </>
               ) : (
                 <>
-                  <div className="text-4xl font-Kanit font-bold text-white py-4">
+                  <div className=" text-2xl md:text-4xl font-Kanit font-bold text-white py-4">
                     No Blog found with the keyword "{searchBar}"
                   </div>
                 </>

@@ -24,10 +24,13 @@ const Login = () => {
   const loginBtn = async () => {
     console.log("Logging in");
     try {
-      const response = await axios.post("http://localhost:3001/user/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://codewords-web-service.onrender.com/user/login",
+        {
+          username,
+          password,
+        }
+      );
       console.log(response);
 
       setCookie("auth_Token", response.data.token);
