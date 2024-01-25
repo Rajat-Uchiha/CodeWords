@@ -3,7 +3,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
-import addblogSVG from "./addblogSVG.svg";
+import Navbar from "./Navbar";
 
 const Addblog = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Addblog = () => {
 
     axios
       .post(
-        "http://localhost:3001/blogs/create",
+        "https://codewords-web-service.onrender.com/blogs/create",
         {
           title,
           snippet,
@@ -42,6 +42,7 @@ const Addblog = () => {
 
   return (
     <>
+      <Navbar />
       {!cookie.auth_Token ? (
         <Login />
       ) : (

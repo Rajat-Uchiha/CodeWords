@@ -22,8 +22,6 @@ function App() {
     <>
       <Router>
         <AppContext.Provider value={{ nav_username, setNav_username }}>
-          <Navbar />
-
           <Routes>
             <Route path="/" element={<Blogs />} />
             <Route path="about" element={<About />} />
@@ -39,7 +37,7 @@ function App() {
             />
             <Route path={`/blogs/:id`} element={<Currblog />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </AppContext.Provider>
       </Router>
     </>
