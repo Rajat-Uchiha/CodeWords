@@ -105,7 +105,7 @@ const Signup = () => {
         </p>
       </div> */}
       <div className=" w-full bg-gradient-to-bl from-blue-600 to-pink-700 flex justify-center items-center flex-col ">
-        <div className=" w-1/3 flex justify-center items-start flex-col h-1/5  space-y-4 px-10 pt-6   ">
+        <div className="w-full md:px-0 md:w-1/3 flex justify-center items-start flex-col h-1/5  space-y-4 px-10 pt-6 ">
           <h4 className="text-4xl underline underline-offset-4 font-Kanit text-white">
             Create Account
           </h4>
@@ -113,7 +113,7 @@ const Signup = () => {
             Your Contributions will definitely make a difference.
           </p>
         </div>
-        <div className="h-3/6 w-1/3 flex items-start flex-col space-y-10 px-10 py-2 ">
+        <div className="w-full md:px-0 md:w-1/3  h-3/6 flex items-start flex-col space-y-10 px-10 py-2   ">
           <form className="space-y-4 flex flex-col w-full">
             <input
               onChange={getUsername}

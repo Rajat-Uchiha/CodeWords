@@ -25,9 +25,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black text-white py-4 min-w-full ">
-        <ul className="flex justify-between items-center space-x-10 mx-2 md:ml-20 font-Kanit text-2xl md:mx-10 ">
-          <div>
+      <nav className="bg-black text-white min-w-full ">
+        <ul className="flex justify-between items-center space-x-10 mx-2 md:ml-20 font-Kanit text-2xl md:mx-10 py-1  ">
+          <div className="flex justify-center items-center ">
             <span className="text-transparent font-Kanit text-md md:text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
               CodeWords
             </span>
@@ -44,18 +44,18 @@ const Navbar = () => {
 
           {/* FOR BIG SCREENS */}
 
-          <div className="hidden space-x-10 md:flex">
+          <div className="hidden  md:flex  ">
             <li
               className={`cursor-pointer ${
-                location.pathname === "/" ? " text-yellow-400" : ""
-              } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                location.pathname === "/" ? " text-black bg-white" : ""
+              }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
             >
               <Link to="/">Blogs</Link>
             </li>
             <li
               className={`cursor-pointer ${
-                location.pathname === "/about" ? " text-yellow-400" : ""
-              } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                location.pathname === "/about" ? " text-black bg-white" : ""
+              }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
             >
               <Link to="/about">About</Link>
             </li>
@@ -63,42 +63,48 @@ const Navbar = () => {
               <>
                 <li
                   className={`cursor-pointer ${
-                    location.pathname === "/login" ? " text-yellow-400" : ""
-                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                    location.pathname === "/login" ? " text-black bg-white" : ""
+                  }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
                 >
                   <Link to="/login">Login</Link>
                 </li>
                 <li
                   className={`cursor-pointer ${
-                    location.pathname === "/signup" ? " text-yellow-400" : ""
-                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                    location.pathname === "/signup"
+                      ? " text-black bg-white"
+                      : ""
+                  }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
                 >
-                  <Link to="/signup">SignUp</Link>
+                  <Link to="/signup">Signup</Link>
                 </li>
               </>
             ) : (
-              <div className="flex items-center justify-end space-x-6 w-full">
+              <div className="flex items-center justify-end w-full">
                 <li
                   className={`cursor-pointer ${
-                    location.pathname === "/myblogs" ? " text-yellow-400" : ""
-                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                    location.pathname === "/myblogs"
+                      ? " text-black bg-white"
+                      : ""
+                  }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
                 >
                   <Link to="/myblogs/">My Blogs</Link>
                 </li>
                 <li
                   className={`cursor-pointer ${
-                    location.pathname === "/addblog" ? " text-yellow-400" : ""
-                  } hover:text-yellow-400 hover:underline hover:underline-offset-4`}
+                    location.pathname === "/addblog"
+                      ? " text-black bg-white"
+                      : ""
+                  }   hover:bg-white hover:text-black h-full py-3 px-8 text-xl border-2 border-black`}
                 >
                   <Link to="/addblog">Add Blog</Link>
                 </li>
-                <div className="flex space-x-4  ">
-                  <h3 className="text-xl underline underline-offset-4">
+                <div className="flex  justify-center items-center  ">
+                  <h3 className="text-xl underline underline-offset-4 px-2">
                     Hi👋🏻 {nav_username}
                   </h3>
                   <button
                     onClick={logout}
-                    className="text-xl border-2 border-red-600 bg-red-600 px-4 hover:scale-110 transition-all "
+                    className="text-xl border-2 border-red-600 bg-red-600 px-4 hover:scale-110 transition-all py-2 "
                   >
                     Logout
                   </button>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Loading_gif from "./Loading-gif.gif";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   const [searchBar, setSearchBar] = useState("");
@@ -152,6 +153,7 @@ const Blogs = () => {
           </ul>
         )}
       </section>
+      <Footer />
     </>
   );
 };

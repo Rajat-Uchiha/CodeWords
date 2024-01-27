@@ -3,6 +3,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Myblogs = () => {
   const [cookie] = useCookies(["auth_Token"]);
@@ -121,6 +122,7 @@ const Myblogs = () => {
           <div>You have not contributed any blog as of now.</div>
         )}
       </section>
+      <Footer />
     </>
   );
 };

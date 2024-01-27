@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 const Currblog = () => {
   const location = useLocation();
 
@@ -48,6 +49,7 @@ const Currblog = () => {
           <>Loading Template</>
         )}
       </section>
+      <Footer />
     </>
   );
 };

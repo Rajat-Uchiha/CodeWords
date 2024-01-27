@@ -46,8 +46,8 @@ const Login = () => {
   };
 
   return (
-    <section className="border-2 border-black min-h-screen flex">
-      <div className=" w-1/2 bg-black flex space-y-4 flex-col justify-center items-center">
+    <section className=" min-h-screen md:flex">
+      <div className="hidden md:flex w-1/2 bg-black  space-y-4 flex-col justify-center items-center">
         <h1 className="text-4xl md:text-8xl">
           <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
             CodeWords
@@ -58,8 +58,8 @@ const Login = () => {
           Welcome Back!
         </p>
       </div>
-      <div className=" w-1/2 bg-gradient-to-bl from-blue-600 to-pink-700 flex justify-center items-center flex-col ">
-        <div className=" w-1/2 flex justify-start items-start flex-col h-1/6 space-y-4">
+      <div className="w-full min-h-screen space-y-4 md:h-full md:w-1/2 bg-gradient-to-bl from-blue-600 to-pink-700 flex justify-center items-center flex-col ">
+        <div className="w-full px-12 md:px-0 md:mx-0 md:w-1/2 flex justify-start items-start flex-col h-1/6 space-y-4">
           <h4 className="text-4xl underline underline-offset-4 font-Kanit text-white">
             Login
           </h4>
@@ -67,7 +67,7 @@ const Login = () => {
             Login your CodeWords account
           </p>
         </div>
-        <div className="h-3/6 w-1/2 flex items-start flex-col space-y-10 ">
+        <div className="w-full px-12 md:px-0 md:mx-0 md:w-1/2 h-3/6 flex items-start flex-col space-y-10 ">
           <form className="space-y-4 flex flex-col w-full">
             <input
               onChange={getUsername}
