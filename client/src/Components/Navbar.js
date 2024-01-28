@@ -26,13 +26,13 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-black text-white min-w-full ">
-        <ul className="flex justify-between items-center space-x-10 mx-2 md:ml-20 font-Kanit text-2xl md:mx-10 py-1  ">
+        <ul className="flex justify-between items-center space-x-10 mx-2 lg:ml-20 font-Kanit text-2xl lg:mx-10 py-1  ">
           <div className="flex justify-center items-center ">
-            <span className="text-transparent font-Kanit text-md md:text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
+            <span className="text-transparent font-Kanit text-md lg:text-3xl font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
               CodeWords
             </span>
           </div>
-          <div className="md:hidden flex justify-center items-center">
+          <div className="lg:hidden flex justify-center items-center">
             <button
               onClick={() => {
                 setIsBurgerClicked(!isBurgerClicked);
@@ -44,7 +44,7 @@ const Navbar = () => {
 
           {/* FOR BIG SCREENS */}
 
-          <div className="hidden  md:flex  ">
+          <div className="hidden  lg:flex  ">
             <li
               className={`cursor-pointer ${
                 location.pathname === "/" ? " text-black bg-white" : ""
@@ -119,7 +119,7 @@ const Navbar = () => {
       <div
         className={`px-2 pb-10 transition-all bg-black/95 absolute z-100 w-full ${
           isBurgerClicked ? "flex  min-h-60 " : " hidden h-0"
-        } items-center md:hidden`}
+        } items-center lg:hidden`}
       >
         <ul className="text-white flex justify-start items-start flex-col font-Kanit text-xl space-y-4 ">
           <li
@@ -154,7 +154,7 @@ const Navbar = () => {
               </li>
             </>
           ) : (
-            <div className=" flex-col space-y-2 md:space-y-0 md:flex md:flex-row items-center justify-end md:space-x-6 w-full ">
+            <div className=" flex-col space-y-2 lg:space-y-0 lg:flex lg:flex-row items-center justify-end lg:space-x-6 w-full ">
               <li
                 className={`cursor-pointer ${
                   location.pathname === "/myblogs" ? " text-yellow-400" : ""
@@ -169,7 +169,7 @@ const Navbar = () => {
               >
                 <Link to="/addblog">Add Blog</Link>
               </li>
-              <div className=" flex flex-col space-y-4 md:space-y-0 justify-start items-start  md:flex-row md:flex md:space-x-4  ">
+              <div className=" flex flex-col space-y-4 lg:space-y-0 justify-start items-start  lg:flex-row lg:flex lg:space-x-4  ">
                 <h3 className="text-xl underline underline-offset-4">
                   Hi👋🏻 {nav_username}
                 </h3>

@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Loading_gif from "./Loading-gif.gif";
+import Loading_gif from "../Static/Loading-gif.gif";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   const [searchBar, setSearchBar] = useState("");
@@ -54,7 +55,7 @@ const Blogs = () => {
               </span>
             </h3>
             <div className="flex flex-col space-y-4 justify-center items-center">
-              <img className="w-40" src={Loading_gif} alt="Loading..." />
+              <img className="w-40" src={Loading_gif} alt="Loading... GIF" />
               <h1 className="font-Kanit text-2xl md:text-4xl font-medium">
                 Loading. . .
               </h1>

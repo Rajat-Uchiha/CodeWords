@@ -1,9 +1,8 @@
 import { useState } from "react";
-
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Hide_icon from "./Hide_icon.png";
-import Show_icon from "./Show_icon.png";
+import Hide_icon from "../Static/Hide_icon.png";
+import Show_icon from "../Static/Show_icon.png";
 const Signup = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -36,74 +35,7 @@ const Signup = () => {
   };
 
   return (
-    // <section className="px-4 md:px-20 min-h-screen bg-black ">
-    //   <div className=" pt-10">
-    //     <h1 className="text-3xl md:text-8xl font-Kanit font-bold  ">
-    //       <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-600 to-pink-700">
-    //         Join with other Like Minded CODERS - PROGRAMMERS Now!
-    //       </span>
-    //     </h1>
-    //   </div>
-    //   <div className="md:flex justify-center items-start ">
-    //     <div className="w-full md:w-1/2 flex justify-center">
-    //       <img src={SignupToday} alt="newImage" />
-    //     </div>
-    //     <div className="w-full md:w-1/2 flex justify-center items-center ">
-    //       <div className="font-Kanit space-y-14  w-3/4 my-10">
-    //         <div className=" space-y-4 flex flex-col items-start justify-center ">
-    //           <label htmlFor="">
-    //             <span className=" font-Kanit text-2xl md:text-4xl font-semibold  text-white">
-    //               Username
-    //             </span>
-    //           </label>
-    //           <input
-    //             onChange={getUsername}
-    //             className=" p-1 md:p-2 w-full  md:text-2xl text-white bg-black/30 border-2 border-white"
-    //             type="text"
-    //           />
-    //         </div>
-    //         <div className=" space-y-4 flex flex-col items-start justify-center">
-    //           <label htmlFor="">
-    //             <span className="font-Kanit text-2xl md:text-4xl font-semibold  text-white">
-    //               Password
-    //             </span>
-    //           </label>
-    //           <input
-    //             onChange={getPassword}
-    //             className="  p-1 md:p-2 w-full  md:text-2xl text-white bg-black/30 border-2 border-white"
-    //             type="password"
-    //           />
-    //         </div>
-    //         <div className="flex justify-between items-end">
-    //           <button
-    //             onClick={signupBtn}
-    //             className="my-2 hover:scale-110 transition-all md:hover:text-2xl text-lg md:text-xl font-bold font-Kanit text-white bg-yellow-500 py-1 md:py-2 px-12"
-    //           >
-    //             SIGNUP
-    //           </button>
-    //           <Link
-    //             to="/login"
-    //             className="my-2 underline underline-offset-2 hover:underline hover:underline-offset-4 transition-all  text-xl font-Kanit text-white py-2 px-12"
-    //           >
-    //             Login
-    //           </Link>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <section className=" min-h-screen flex">
-      {/* <div className=" w-1/2 bg-black flex space-y-4 flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-8xl">
-          <span className="text-transparent font-Kanit font-semibold bg-clip-text bg-gradient-to-r from-blue-700 to-pink-800">
-            CodeWords
-          </span>
-          <br />
-        </h1>
-        <p className="text-white font-Kanit underline underline-offset-8 text-4xl">
-          Let's Go on a Journey!
-        </p>
-      </div> */}
       <div className=" w-full bg-gradient-to-bl from-blue-600 to-pink-700 flex justify-center items-center flex-col ">
         <div className="w-full md:px-0 md:w-1/3 flex justify-center items-start flex-col h-1/5  space-y-4 px-10 pt-6 ">
           <h4 className="text-4xl underline underline-offset-4 font-Kanit text-white">
@@ -130,6 +62,7 @@ const Signup = () => {
               />
               <img
                 src={hidePassword ? Hide_icon : Show_icon}
+                alt="Show_Hide_password"
                 onClick={() => {
                   setHidePassword(!hidePassword);
                 }}

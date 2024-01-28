@@ -3,8 +3,8 @@ import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 import { useContext } from "react";
-import Hide_icon from "./Hide_icon.png";
-import Show_icon from "./Show_icon.png";
+import Hide_icon from "../Static/Hide_icon.png";
+import Show_icon from "../Static/Show_icon.png";
 import axios from "axios";
 
 const Login = () => {
@@ -84,7 +84,7 @@ const Login = () => {
               />
               <img
                 src={hidePassword ? Hide_icon : Show_icon}
-                alt="hiddenIcon"
+                alt="Show_Hide_password"
                 onClick={() => {
                   setHidePassword(!hidePassword);
                 }}

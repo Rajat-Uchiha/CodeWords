@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import myLogo from "./myLogo.png";
+import myLogo from "../Static/myLogo.png";
 
 const Footer = () => {
   const location = useLocation();
@@ -103,7 +103,7 @@ const Footer = () => {
           <img
             className="invert w-16 md:w-20 py-2 md:py-0"
             src={myLogo}
-            alt="work-with-rajat_logo"
+            alt="work-with-rajat.netlify.app"
           />
         </div>
       </div>

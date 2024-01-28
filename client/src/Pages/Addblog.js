@@ -3,8 +3,8 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Addblog = () => {
   const navigate = useNavigate();
@@ -47,54 +47,54 @@ const Addblog = () => {
       {!cookie.auth_Token ? (
         <Login />
       ) : (
-        <section className=" w-full flex justify-center min-h-screen md:px-10 items-center bg-black">
-          <div className="w-1/2 mx-auto min-h-screen flex justify-center items-start">
+        <section className=" w-full flex justify-center min-h-screen lg:px-10 items-center bg-black">
+          <div className="hidden w-1/2 mx-auto min-h-screen lg:flex justify-center items-start">
             <h4 className="font-Kanit text-white/90 text-7xl leading-normal font-bold">
               Unleash your thoughts and passions on CodeWords <br />
               Your story awaits a global audience!
             </h4>
           </div>
-          <form className="flex flex-col md:w-1/2 mx-auto min-h-screen space-y-14 md:px-20  font-Kanit py-10 shadow-xl  ">
-            <div className=" ">
-              <h3 className="text-white text-2xl ">
+          <form className="flex flex-col lg:w-1/2 mx-auto min-h-screen space-y-14 lg:px-20  font-Kanit py-10 shadow-xl  ">
+            <div className=" px-4 lg:px-0 ">
+              <h3 className="text-white text-lg lg:text-2xl ">
                 Step into the world of expression with our easy-to-use blog
                 space. Your ideas matter, share them with the world
                 effortlessly.
               </h3>
             </div>
-            <div className="flex flex-col space-y-4 ">
+            <div className="flex flex-col space-y-4 px-4 lg:px-0 ">
               <input
                 onChange={(e) => {
                   setTitle(e.target.value);
                 }}
-                className=" p-1 text-lg md:p-2 md:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
+                className=" p-1 text-lg lg:p-2 lg:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
                 type="text"
                 placeholder="Title"
               />
             </div>
-            <div className="flex flex-col space-y-4 ">
+            <div className="flex flex-col space-y-4 px-4 lg:px-0 ">
               <input
                 onChange={(e) => {
                   setSnippet(e.target.value);
                 }}
-                className=" p-1 text-lg md:p-2 md:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
+                className=" p-1 text-lg lg:p-2 lg:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
                 type="text"
                 placeholder="Snippet"
               />
             </div>
-            <div className="flex flex-col space-y-4 ">
+            <div className="flex flex-col space-y-4 px-4 lg:px-0 ">
               <textarea
                 onChange={(e) => {
                   setBody(e.target.value);
                 }}
-                className=" p-1 text-lg md:p-2 md:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
+                className=" p-1 text-lg lg:p-2 lg:text-2xl text-white border-b-2 border-white outline-none bg-transparent placeholder:text-white"
                 type="text"
                 placeholder="Body"
               />
             </div>
             <button
               onClick={addBlog}
-              className=" border-2 border-white font-Kanit text-white text-2xl w-1/4 py-1 hover:bg-white transition-all hover:text-black"
+              className=" mx-4 lg:mx-0 border-2 border-white font-Kanit text-white text-base lg:text-2xl w-1/4 py-1 hover:bg-white transition-all hover:text-black"
             >
               Submit
             </button>

@@ -1,13 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
-import Navbar from "./Components/Navbar";
-import Blogs from "./Components/Blogs";
-import About from "./Components/About";
-import Addblog from "./Components/Addblog";
+import Blogs from "./Pages/Blogs";
+import About from "./Pages/About";
+import Addblog from "./Pages/Addblog";
 import Currblog from "./Components/Currblog";
-import Login from "./Components/Login";
-import Signup from "./Components/Signup";
-import Footer from "./Components/Footer";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 import Myblogs from "./Components/Myblogs";
 import { useState, createContext } from "react";
 
@@ -37,7 +35,6 @@ function App() {
             />
             <Route path={`/blogs/:id`} element={<Currblog />} />
           </Routes>
-          {/* <Footer /> */}
         </AppContext.Provider>
       </Router>
     </>
